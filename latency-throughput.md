@@ -68,6 +68,6 @@ transfered at one point in time - in practice.
 
 
 
-#### source mentions (not complete):
+#### source mentions (not exhaustive):
 
 https://www.comparitech.com/net-admin/latency-vs-throughput/
