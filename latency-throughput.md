@@ -3,7 +3,7 @@
 Both latency and troughput are measurements that can be used to assess the speed of data transfers over a network. 
 
 
-###Latency
+### Latency
 
 "The time taken for a packet of data to be transfered across a network" 
 
@@ -23,7 +23,7 @@ the physical distance between the sending and receiving machine
 
 
 
-###Throughput
+### Throughput
 
 "The quantity of data being sent and received within a fixed amount of time"
 
@@ -34,10 +34,10 @@ Throughput is measured in "megabits per second" (Mbps) or "gigabits per second"(
 
 
 
-###Both latency and throughput are related to the concept of bandwith
+### Both latency and throughput are related to the concept of bandwith
 
 
-###Bandwith
+### Bandwith
 
 "The maximum rate of data transfer across a given path in a network"
 
@@ -52,7 +52,7 @@ The maximum bandwith is limited by the standard of the internet connection and t
 -> throughput describes how many packets of data can be exchanged over a network in a fixed amount of time
 
 
-###The relationhip between latency and bandwith
+### The relationhip between latency and bandwith
 
 A lowered amount of bandwith and an increased amount of latency will both decrease the
 best possible speed of data transfered across a network. With increased bandwith the 
@@ -60,7 +60,7 @@ speed of transfering data increases as well. This effect is not diminished by a
 low level of latency
 
 
-###Throughput vs Bandwith
+### Throughput vs Bandwith
 
 Bandwith can be thought of as the limit of the amount of data that can transfered over the network
 at one point in time, while throughput can be though of as the actual amount of data that is being 
@@ -68,6 +68,6 @@ transfered at one point in time - in practice.
 
 
 
-####source mentions (not complete):
+#### source mentions (not complete):
 
 https://www.comparitech.com/net-admin/latency-vs-throughput/
