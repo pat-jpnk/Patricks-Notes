@@ -47,7 +47,7 @@ The maximum bandwith is limited by the standard of the internet connection and t
 
 -> bandwith describes the maximum possible amount of data being exchanged at a certain point in time 
 
-> latency describes the time it takes for a single packet to be transfered from one point on a network to another during an exchange 
+-> latency describes the time it takes for a single packet to be transfered from one point on a network to another during an exchange 
 
 -> throughput describes how many packets of data can be exchanged over a network in a fixed amount of time
 
@@ -68,6 +68,6 @@ transfered at one point in time - in practice.
 
 
 
-#####source mentions (not complete):
+####source mentions (not complete):
 
 https://www.comparitech.com/net-admin/latency-vs-throughput/
