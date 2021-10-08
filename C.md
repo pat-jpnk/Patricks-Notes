@@ -1,6 +1,6 @@
 # C 
 
-# when maybe not to initialize a variable
+# reasons to not initialize a variable
 
 - if it is global or static and you want the initial value 
   to be 0, many compilers will store 0's in the binary, 
@@ -24,5 +24,6 @@
 
 > int a; // global, 0  
 > void foo() {  
+>   
 > int b; // function, ?  
 > }  
