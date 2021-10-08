@@ -15,7 +15,7 @@
   compiler can't give a warning if the variable is not given
   a meaningful value in certain code paths 
 
-# fact about initialization
+# facts about initialization
 
 - when a variable is declared inside of a function, its 
   initialized to whatever value happens to be in memory
