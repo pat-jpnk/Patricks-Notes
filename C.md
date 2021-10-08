@@ -4,7 +4,8 @@
 
 - if it is global or static and you want the initial value 
   to be 0, many compilers will store 0's in the binary, 
-  many 0's for large arrays 
+  many 0's in the case of large arrays, this is relevant when 
+  storage is limited
 
 - when the variable will immediately be passed to another 
   function that will set it to different value 
