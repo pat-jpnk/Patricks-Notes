@@ -24,7 +24,7 @@
 
 > int main(void) {  
 >  
-  >   int a;                  // global scope, (a = 0)  
+>   int a;                  // global scope, (a = 0)  
 >   
 >   void foo() {  
 >     int b;                // function scope, (b = ?)  
