@@ -22,7 +22,7 @@
   (garbage value), when it is declared in static or global 
   scope, it is initialized to 0
 
-> int a; // global, 0
-> void foo() {
-> int b; // function, ?
-> }
+> int a; // global, 0  
+> void foo() {  
+> int b; // function, ?  
+> }  
