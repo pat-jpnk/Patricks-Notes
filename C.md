@@ -23,7 +23,7 @@
   scope, it is initialized to 0
 
 > int a; // global, 0  
-> void foo() {  
 >   
-> int b; // function, ?  
+> void foo() {  
+>   int b; // function, ?  
 > }  
