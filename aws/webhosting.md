@@ -15,11 +15,12 @@
         database, load balancing, includes option to transfer to EC2
         instance, can be integrated with 90+ aws services via Amazon
         VPC peering, supports many operating systems and web stacks, 
-        including common set-ups like WordPress, Drupal, Magneto, etc...
+        including common set-ups like WordPress, Drupal, Magneto, LAMP, 
+        etc...
 
 (amplify)
 - => has built-in support for static site generators (e.g. gatsby, jekyll)
-     and for SPA-frameworks (react, angular, vue), can be used to deplo
+     and for SPA-frameworks (react, angular, vue), can be used to deploy
      SPA with serverless backend, application can be deployed from code
      repository,cinlcudes support for native and non-native mobile platform
 
