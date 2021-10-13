@@ -49,15 +49,15 @@ general process:
   -> linking
 
 
-# static libraries vs dynamic / shared libraries
+# static libraries vs dynamic/shared libraries
 
 static libraries:
   - is "locked" into executable after compiling
   - tends to be faster, as it is embedded into the 
     executable 
 
-dynamic / shared libraries: 
-  -is accessed by the executable, outside of itself 
+dynamic/shared libraries: 
+  - is accessed by the executable outside of itself 
   - tend to produce smaller executables
 
 
@@ -74,5 +74,10 @@ dynamic / shared libraries:
 
 
 
-# creating dynamic / shared library (Linux/gcc)
-  - using "test.c" as the basis 
+# creating dynamic/shared library (Linux/gcc)
+  - using "test.c" as the basis
+  
+  - creating object files without fixed memory adresses (using: "gcc test.c -c -fpic")
+  - compiling object files into dynamic/shared library  (using: "gcc test.o -shared -o liball.so") ("lib" pre-fix indicates that this is a library to the compiler, when used later)
+  - adding the library locationn to the environmen path (using: "export LD_LIBRARY_PATH=$PATH:$LD_LIBRARY_PATH")
+
