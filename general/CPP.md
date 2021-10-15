@@ -17,3 +17,8 @@ use-cases:
 - to access things in the scope of a namespace (std::cout)
 
 - to refer to a member of a nested class (outside::inside::y = 2)
+
+
+# std::endl vs '\n'
+
+- std::endl flushes the output buffer, '\n' does not 

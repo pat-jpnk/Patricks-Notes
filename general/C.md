@@ -32,6 +32,18 @@
 >     
 > }
 
+
+# abort() vs exit()
+
+- abort() sends SIGABRT, exit() closes the application 'normally'
+- default reaction to abort signal may be overriden 
+
+- abort() exits the program without calling functions registered using atexit() and
+  without calling destructors of static and global members
+- exit() calls atexit() functions and destructors, but not automatic destructors (C++ implements this) 
+
+
+
 # compiling vs linking 
 
 compiling:
