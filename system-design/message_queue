@@ -1,0 +1,16 @@
+# message queues 
+
+# benefits 
+- can increase redundancy via persistent storage 
+- can increase efficiency via batch processing 
+- can be used for asynchronos processing of perhaps  
+  compute intensive tasks
+- can be used to break larger processes into several smaller 
+  ones (i.e. Saga Pattern)
+
+
+# example implementations
+- kafka (event streaming)
+- rabbitmq 
+- redis 
+- aws sqs
