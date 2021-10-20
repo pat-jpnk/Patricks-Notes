@@ -21,4 +21,11 @@ use-cases:
 
 # std::endl vs '\n'
 
-- std::endl flushes the output buffer, '\n' does not 
+- std::endl flushes the output buffer, '\n' does not
+
+
+# templates 
+
+- used for abstraction (e.g. for algorithms, containers) /  generic programming
+- 'blueprints' the compiler uses to create functions and types
+

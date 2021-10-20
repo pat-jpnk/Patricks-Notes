@@ -85,6 +85,7 @@ dynamic/shared libraries:
                                     -> -o [arg], where arg is the name of the executable (optional)
 
 
+TODO: arrange this section better
 
 # creating dynamic/shared library (Linux/gcc)
   - using "test.c" as the basis

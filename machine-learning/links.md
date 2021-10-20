@@ -1,3 +1,6 @@
+https://www.tutorialspoint.com/scikit_learn/scikit_learn_introduction.htm
+
+
 https://whimsical.com/machine-learning-roadmap-2020-CA7f3ykvXpnJ9Az32vYXva
 
 fast.ai
