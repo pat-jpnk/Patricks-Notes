@@ -1,18 +1,18 @@
 ### aws
 
-storage.md\webhosting.md\
+storage.md<br>webhosting.md<br>
 ### general
 
-C.md\container-vm.md\cors.md\CPP.md\links.md\
+C.md<br>container-vm.md<br>cors.md<br>CPP.md<br>links.md<br>
 ### machine-learning
 
-links.md\
+links.md<br>
 ### networking
 
-latency-thoughput.md\
+latency-thoughput.md<br>
 ### system-design
 
-cqrs.md\
+cqrs.md<br>
 ### web
 
-nginx.md\
+nginx.md<br>
