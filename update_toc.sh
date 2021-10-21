@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This is a bash script which creates a sort of table of contents 
-# 
+# based on the contents of this repository 
 
 ##################################################
 
