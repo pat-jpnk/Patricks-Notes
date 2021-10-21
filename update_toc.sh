@@ -53,9 +53,16 @@ do
   for element in "${!CONTENTS[@]}"        
   do
     if [ $element == $item ]; then
-      printf "[%s](https://github.com/pat-jpnk/Patricks-Notes/blob/main/%s)<br>" ${CONTENTS[$element]} ${CONTENTS[$element]} >> README.md
+      printf "%s<br>" ${CONTENTS[$element]} >> README.md
       printf '\n' >> README.md
       break
     fi
   done
 done
+
+
+#https://github.com/pat-jpnk/Patricks-Notes/blob/main/aws/webhosting.md
+
+
+
+#https://github.com/pat-jpnk/Patricks-Notes/blob/main/webhosting.md
