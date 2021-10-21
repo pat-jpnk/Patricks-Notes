@@ -1,20 +1,43 @@
+#!/usr/bin/env bash
 
-#ls -R 
+# This is a bash script which creates a sort of table of contents 
+# 
 
-OUTPUT=$(ls */*.md)
+##################################################
 
-declare -a O_ARRAY        # declare array
+# ---- rough outline ----
 
-O_ARRAY=($OUTPUT)
-
+# output and store directory contents 
 
 # example: general/C.md
 
-# - one array for keys + assosiative array
+# - create one array for categories
+#   and one assosiative array to split 
 
-###declare -a CATEGORIES 
 
-###declare -A CONTENTS 
+# add all unique categories to array
+
+# add all pairs (category -> title)
+
+# write to README.md:
+#     -> write header (category)
+#         -> write all titles (for key=category in categories[])
+
+##################################################
+
+
+OUTPUT=$(ls */*.md)       # save command output 
+
+declare -a O_ARRAY        # declare array
+
+declare -a CATEGORIES     # declare array 
+
+declare -A CONTENTS       # declare associative array
+
+O_ARRAY=($OUTPUT)         # assing values to array
+
+
+# define function - checks if array already contains category (from StackOverflow)
 
 containsElement () {
   local e match="$1"
@@ -23,48 +46,31 @@ containsElement () {
   return 1
 }
 
+for item in "${O_ARRAY[@]}"
+do 
+  IFS=/ read category title <<< $item 
+  containsElement $category "${CATEGORIES[@]}"                  # "${O_ARRAY[@]}"
+  RES=$?
 
-containsElement "general/C.md" "${O_ARRAY[@]}"
+  if [ "$RES" -eq "1" ]; then
+    CATEGORIES+=($category)
+    CONTENTS[$category]+=$title
+  else
+    CONTENTS[$category]+=$title 
+  fi
+done 
 
-RES=$?
+for item in "${CATEGORIES[@]}" 
+do
+  echo "###$item" >> rm.txt
+  printf '\n' >> rm.txt
 
-if [ "$RES" -eq "0" ]; then
-  echo "YAY"
-else 
-  echo "NAY"
-fi
-
-###for item in O_ARRAY:
-###do
-
-###EX="aws/doo.md"
-
-
-###IFS=/ read category content <<< $EX
-
-###echo "$category"
-
-###echo "$content"
-
-
-
-
-
-
-
-#D=${echo $EX | tr "/" "\n"}
-
-#echo "${D}"
-
-#echo "${O_ARRAY}"
-
-
-
-
-
-
-
-
-
-
+  for element in "${!CONTENTS[@]}"          # this loops through everything, very inefficient, but bash syntax not nice and this will only run once every blue moon anyways
+  do
+    if [ $element == $item ]; then
+      echo "  ${CONTENTS[$element]}" >> rm.txt
+      printf '\n' >> rm.txt
+    fi
+  done
+done
 
