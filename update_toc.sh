@@ -1,10 +1,14 @@
 #!/usr/bin/env bash
 
-# This is a bash script which creates a sort of table of contents 
-# based on the contents of this repository 
+:'
+ This is a bash script which creates a sort of table of contents 
+ based on the contents of this repository 
 
-# note to self: multidimensional arrays don't exist in bash (except with tricks)
+ note to self: multidimensional arrays do not exist in bash (except with tricks)
 
+ TODO: 
+    - add links for easier browsing
+'
 
 OUTPUT=$(ls */*.md)       # save command output 
 
@@ -26,12 +30,12 @@ containsElement () {
   return 1
 }
 
-# populate arrays
+# split on forward slash and populate arrays
 
 for item in "${O_ARRAY[@]}"
 do 
   IFS=/ read category title <<< $item 
-  containsElement $category "${CATEGORIES[@]}"                  # "${O_ARRAY[@]}"
+  containsElement $category "${CATEGORIES[@]}"                  
   RES=$?
 
   if [ "$RES" -eq "1" ]; then
