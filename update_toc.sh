@@ -3,27 +3,7 @@
 # This is a bash script which creates a sort of table of contents 
 # based on the contents of this repository 
 
-##################################################
-
-# ---- rough outline ----
-
-# output and store directory contents 
-
-# example: general/C.md
-
-# - create one array for categories
-#   and one assosiative array to split 
-
-
-# add all unique categories to array
-
-# add all pairs (category -> title)
-
-# write to README.md:
-#     -> write header (category)
-#         -> write all titles (for key=category in categories[])
-
-##################################################
+# note to self: multidimensional arrays don't exist in bash (except with tricks)
 
 
 OUTPUT=$(ls */*.md)       # save command output 
@@ -46,6 +26,8 @@ containsElement () {
   return 1
 }
 
+# populate arrays
+
 for item in "${O_ARRAY[@]}"
 do 
   IFS=/ read category title <<< $item 
@@ -54,23 +36,26 @@ do
 
   if [ "$RES" -eq "1" ]; then
     CATEGORIES+=($category)
-    CONTENTS[$category]+=$title
+    CONTENTS[$category]+="$title "
   else
-    CONTENTS[$category]+=$title 
+    CONTENTS[$category]+="$title " 
   fi
 done 
 
+
+# write to file
+
 for item in "${CATEGORIES[@]}" 
 do
-  echo "###$item" >> rm.txt
-  printf '\n' >> rm.txt
+  echo "### $item" >> README.md
+  printf '\n' >> README.md
 
-  for element in "${!CONTENTS[@]}"          # this loops through everything, very inefficient, but bash syntax not nice and this will only run once every blue moon anyways
+  for element in "${!CONTENTS[@]}"        
   do
     if [ $element == $item ]; then
-      echo "  ${CONTENTS[$element]}" >> rm.txt
-      printf '\n' >> rm.txt
+      printf "%s\n" ${CONTENTS[$element]} >> README.md
+      printf '\n' >> README.md
+      break
     fi
   done
 done
-
