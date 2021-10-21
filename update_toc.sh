@@ -53,7 +53,7 @@ do
   for element in "${!CONTENTS[@]}"        
   do
     if [ $element == $item ]; then
-      printf "%s\n" ${CONTENTS[$element]} >> README.md
+      printf "%s\\" ${CONTENTS[$element]} >> README.md
       printf '\n' >> README.md
       break
     fi
