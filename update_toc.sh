@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-:'
- This is a bash script which creates a sort of table of contents 
- based on the contents of this repository 
 
- note to self: multidimensional arrays do not exist in bash (except with tricks)
+# This is a bash script which creates a sort of table of contents 
+# based on the contents of this repository 
+# note to self: multidimensional arrays do not exist in bash (except with tricks)
 
- TODO: 
-    - add links for easier browsing
-'
 
 OUTPUT=$(ls */*.md)       # save command output 
 
@@ -57,7 +53,7 @@ do
   for element in "${!CONTENTS[@]}"        
   do
     if [ $element == $item ]; then
-      printf "%s<br>" ${CONTENTS[$element]} >> README.md
+      printf "[%s](https://github.com/pat-jpnk/Patricks-Notes/blob/main/%s)<br>" ${CONTENTS[$element]} ${CONTENTS[$element]} >> README.md
       printf '\n' >> README.md
       break
     fi

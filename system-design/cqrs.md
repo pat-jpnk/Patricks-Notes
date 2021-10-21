@@ -8,8 +8,11 @@
 - read and write operations might occur through different interfaces
   and on different datastore
   
-  e.g. write interface write to db1
-       db1 replicates data to db2 
-       read interface reads from db2
+  e.g. write interface write to db1<br>
+       db1 replicates data to db2<br>
+       read interface reads from db2<br>
 
-source: https://blog.risingstack.com/cqrs-explained-node-js-at-scale/
+sources: 
+
+https://blog.risingstack.com/cqrs-explained-node-js-at-scale/
+https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
