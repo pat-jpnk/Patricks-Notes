@@ -59,10 +59,3 @@ do
     fi
   done
 done
-
-
-#https://github.com/pat-jpnk/Patricks-Notes/blob/main/aws/webhosting.md
-
-
-
-#https://github.com/pat-jpnk/Patricks-Notes/blob/main/webhosting.md
