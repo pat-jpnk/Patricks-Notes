@@ -2,9 +2,20 @@
 
 
 # This is a bash script which creates a sort of table of contents 
-# based on the contents of this repository 
-# note to self: multidimensional arrays do not exist in bash (except with tricks)
+# based on the contents of this repository in README.md
 
+
+# note to self: 
+#               - multidimensional arrays do not exist in bash (except with tricks)
+#               - there are differences between using "echo" and "printf"          
+
+#--------------------------------------------------------------------------------------
+
+# empty README file so content replaces and does not merely append
+
+truncate -s 0 README.md
+
+# initialize bash data structures 
 
 OUTPUT=$(ls */*.md)       # save command output 
 

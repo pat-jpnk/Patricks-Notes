@@ -37,7 +37,7 @@
 
 - abort() sends SIGABRT, exit() closes the application 'normally'
 - default reaction to abort signal may be overriden 
-
+)
 - abort() exits the program without calling functions registered using atexit() and
   without calling destructors of static and global members
 - exit() calls atexit() functions and destructors, but not automatic destructors (C++ implements this) 
@@ -85,12 +85,21 @@ dynamic/shared libraries:
                                     -> -o [arg], where arg is the name of the executable (optional)
 
 
-TODO: arrange this section better
-
 # creating dynamic/shared library (Linux/gcc)
   - using "test.c" as the basis
   
   - creating object files without fixed memory adresses (using: "gcc test.c -c -fpic")
   - compiling object files into dynamic/shared library  (using: "gcc test.o -shared -o liball.so") ("lib" pre-fix indicates that this is a library to the compiler, when used later)
   - adding the library locationn to the environmen path (using: "export LD_LIBRARY_PATH=$PATH:$LD_LIBRARY_PATH")
+
+
+# arrays and pointers 
+
+pointer to array of integers (not a pointer to 0th element):
+> int(*p)[10] 
+
+array of integer pointers:
+> *p[10]
+
+
 
