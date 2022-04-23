@@ -102,4 +102,14 @@ array of integer pointers:
 > *p[10]
 
 
+# 'defining' vs. 'declaring' of variables 
 
+- when a variable is declared, the compiler is aware of the 
+  variables existence (i.e. its type), no memeory is allocated
+
+  -> > int c; 
+
+- when a variable is defined, the compiler allocates memory
+  for the variable
+
+  -> > int c = 22; 

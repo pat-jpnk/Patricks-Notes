@@ -8,6 +8,7 @@
 # note to self: 
 #               - multidimensional arrays do not exist in bash (except with tricks)
 #               - there are differences between using "echo" and "printf"          
+#                 (e.g. printf can print control characters)
 
 #--------------------------------------------------------------------------------------
 
